@@ -31,7 +31,7 @@ function App() {
                 <span className="sr-only">Accredian</span>
                 <img
                   alt="Accredian logo"
-                  src="src/assets/Accredian_logo.png"
+                  src="src\assets\Accredian_logo.svg"
                   className="h-8 md:h-12 w-auto"
                 />
               </a>
@@ -78,7 +78,7 @@ function App() {
                   <span className="sr-only">Accredian</span>
                   <img
                     alt="Accredian logo"
-                    src="src/assets/Accredian_logo.png"
+                    src="src\assets\Accredian_logo.svg"
                     className="h-9 w-auto"
                   />
                 </a>
@@ -138,7 +138,7 @@ function App() {
               </h1>
               <img
                 className="w-full max-w-xs mx-auto"
-                src="src/assets/Accredian_botton_line.png"
+                src="src\assets\Accredian_botton_line.svg"
                 alt="Accredian bottom line"
               />
               <p className="mt-6 text-base sm:text-lg leading-8 text-gray-600">
