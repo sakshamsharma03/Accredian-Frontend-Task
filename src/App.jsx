@@ -31,7 +31,7 @@ function App(){
   
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
-  
+  const [isFormOpen, setIsFormOpen] = useState(false);
   
   
   return (
@@ -169,10 +169,16 @@ function App(){
             </div>
           </div>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a href={<Form/>} className="rounded-md cursor-pointer bg-indigo-500 px-8 py-2 text-base sm:text-lg md:text-2xl font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            {/* <a href={<Form/>} className="rounded-md cursor-pointer bg-indigo-500 px-8 py-2 text-base sm:text-lg md:text-2xl font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
             >
               Refer Now
-            </a>
+            </a> */}
+            <button
+              onClick={() => setIsFormOpen(true)}
+              className="rounded-md cursor-pointer bg-indigo-500 px-8 py-2 text-base sm:text-lg md:text-2xl font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            >
+              Refer Now
+            </button>
           </div>
           <div
             aria-hidden="true"
@@ -188,7 +194,24 @@ function App(){
           </div>
         </div>
       </div>
-       <Form />
+      <Dialog open={isFormOpen} onClose={() => setIsFormOpen(false)}>
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen p-4">
+            <DialogPanel className="relative bg-white rounded-xl shadow-lg p-6 w-full max-w-lg">
+              <button
+                type="button"
+                onClick={() => setIsFormOpen(false)}
+                className="absolute top-3 right-3 rounded-md p-2.5 text-gray-700"
+              >
+                <span className="sr-only">Close form</span>
+                <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+              </button>
+              <Form />
+            </DialogPanel>
+          </div>
+        </div>
+      </Dialog>
+       {/* <Form /> */}
       {/* <Routes>
         <Route path="/form" element={<Form/>} />
       </Routes> */}
