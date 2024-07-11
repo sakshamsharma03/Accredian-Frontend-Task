@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Form from "./pages/form";
+import logo from "./assets/Accredian_logo.svg"
+import line from "./assets/Accredian_bottom_line.svg"
 
 const navigation = [
   { name: "Resources", href: "#" },
@@ -31,7 +33,7 @@ function App() {
                 <span className="sr-only">Accredian</span>
                 <img
                   alt="Accredian logo"
-                  src="src\assets\Accredian_logo.svg"
+                  src={logo}
                   className="h-8 md:h-12 w-auto"
                 />
               </a>
@@ -78,7 +80,7 @@ function App() {
                   <span className="sr-only">Accredian</span>
                   <img
                     alt="Accredian logo"
-                    src="src\assets\Accredian_logo.svg"
+                    src={logo}
                     className="h-9 w-auto"
                   />
                 </a>
@@ -138,7 +140,7 @@ function App() {
               </h1>
               <img
                 className="w-full max-w-xs mx-auto"
-                src="src\assets\Accredian_botton_line.svg"
+                src={line}
                 alt="Accredian bottom line"
               />
               <p className="mt-6 text-base sm:text-lg leading-8 text-gray-600">
