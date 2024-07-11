@@ -1,41 +1,20 @@
-// import { useState } from 'react'
-// import './index.css';
-// import Header from './components/header'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//     <Header/>
-//     <div className='text-red-400'>
-
-//       </div>
-//     </>
-//   )
-// }
-
-// export default App
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Form from "./pages/form";
-import { Link, Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 const navigation = [
   { name: "Resources", href: "#" },
   { name: "About us", href: "#" },
 ];
 
-function App(){
-  
+function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   const [isFormOpen, setIsFormOpen] = useState(false);
-  
-  
+
   return (
-    <Router>
+    <>
       <div className="bg-white">
         <header className="fixed inset-x-0 top-0 z-50 shadow-lg bg-white">
           <div className="flex items-center justify-between bg-blue-200 h-16 md:h-20 px-4 md:px-8">
@@ -211,13 +190,8 @@ function App(){
           </div>
         </div>
       </Dialog>
-       {/* <Form /> */}
-      {/* <Routes>
-        <Route path="/form" element={<Form/>} />
-      </Routes> */}
-      </Router>
+    </>
   );
 }
-
 
 export default App;
